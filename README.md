@@ -5,7 +5,7 @@ Program nedetekuje Windows defender! Ukázka: https://www.youtube.com/watch?v=N3
 
 -Při spuštětí:
 
--spustí se proces Form1, který zablokuje možnost vypnutí pomocí zkratek jako ALT F4 a ihned spustí Form2 (Zdrojový kod obsahuje část kodu, který spustí Form2 po nějakém časovém úseku, kdy obět nehýbe s myší)
+-spustí se proces Form1, který zablokuje možnost vypnutí pomocí zkratek jako ALT F4 a ihned spustí Form2 (Zdrojový kod obsahuje část kodu, který spustí Form2 po nějakém časovém úseku, kdy oběť nehýbe s myší)
 
 -Form2:
 
