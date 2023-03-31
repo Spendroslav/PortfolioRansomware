@@ -1,6 +1,8 @@
 # Ransomware
 C# program, který po spuštění zašifruje velkou část souborů na disku pomocí šifrovacího algoritmu TripleDES a následně spustí vyděračskou zprávu, která žádá o výkupné.
 
+Program nedetekuje Windows defender! Ukázka: https://www.youtube.com/watch?v=N3jgRaeVMCg
+
 -Při spuštětí:
 
 -spustí se proces Form1, který ihned spustí Form2 (Zdrojový kod obsahuje část kodu, který spustí Form2 po nějakém časovém úseku, kdy obět nehýbe s myší)
