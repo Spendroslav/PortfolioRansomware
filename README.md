@@ -3,6 +3,8 @@ C# program, který po spuštění zašifruje velkou část souborů na disku pom
 
 Program nedetekuje Windows defender! Ukázka: https://www.youtube.com/watch?v=N3jgRaeVMCg
 
+Odesílá dešifrovací klíč na discord server
+
 -Při spuštětí:
 
 -spustí se proces Form1, který zablokuje možnost vypnutí pomocí zkratek jako ALT F4 a ihned spustí Form2 (Zdrojový kod obsahuje část kodu, který spustí Form2 po nějakém časovém úseku, kdy oběť nehýbe s myší)
