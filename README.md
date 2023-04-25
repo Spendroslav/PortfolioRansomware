@@ -1,4 +1,6 @@
 # Ransomware
+For Educational Purposes Only!!!
+
 C# program, který po spuštění zašifruje velkou část souborů na disku pomocí šifrovacího algoritmu TripleDES a následně spustí vyděračskou zprávu, která žádá o výkupné.
 
 Program nedetekuje Windows defender! Ukázka: https://www.youtube.com/watch?v=N3jgRaeVMCg
