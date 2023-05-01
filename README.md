@@ -4,6 +4,7 @@ For Educational Purposes Only!!! Do not use it as ransomware.
 C# program, který po spuštění zašifruje velkou část souborů na disku pomocí šifrovacího algoritmu TripleDES a následně spustí vyděračskou zprávu, která žádá o výkupné.
 
 Program nedetekuje Windows defender! Ukázka: https://www.youtube.com/watch?v=PfwjxdnjnVk
+
 Odesílá dešifrovací klíč na discord server
 
 -Při spuštětí:
